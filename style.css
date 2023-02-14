@@ -150,7 +150,7 @@ a {
         margin-bottom: 1.5rem;
     }
 
-    .product-card__descriptionб .product-card__price-box {
+    .product-card__description, .product-card__price-box {
         margin-bottom: 1.875rem;
     }
 }
