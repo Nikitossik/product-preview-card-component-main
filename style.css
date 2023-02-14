@@ -14,7 +14,8 @@
     --bg-btn-hover: #1A4032;
 }
 
-html {
+html, body {
+    height: 100%;
     box-sizing: border-box;
 }
 
@@ -23,6 +24,8 @@ body {
     font-weight: 500;
     font-size: 1rem;
     background-color: var(--clr-bg);
+    display: grid;
+    place-items: center;
 }
 
 img, picture {
@@ -32,12 +35,15 @@ img, picture {
 
 a {
     text-decoration: none;
-    color: inherit;
+}
+
+.attribution {
+    text-align: center;
 }
 
 .container {
-    width: min(100%, 35.5rem);
-    min-height: 100vh;
+    width: min(100%, 37.5rem);
+    height: 100%;
     padding: 1.75rem 1rem;
     margin-inline: auto;
     display: flex;
@@ -57,7 +63,6 @@ a {
 
 .product-card__content {
     padding: 1.5rem;
-    padding: clamp(1.5rem, 1.1428571428571428rem + 0.9523809523809524vw, 2rem);
     background: var(--neu-white);
 }
 
@@ -68,7 +73,6 @@ a {
     letter-spacing: 5px;
     color: var(--neu-gray-blue);
     margin-bottom: 0.75rem;
-    margin-bottom: clamp(0.75rem, 0.39285714285714285rem + 0.9523809523809524vw, 1.25rem);
 }
 
 .product-card__title {
@@ -77,7 +81,6 @@ a {
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 1rem;
-    margin-bottom: clamp(1rem, 0.6428571428571428rem + 0.9523809523809524vw, 1.5rem);
 }
 
 .product-card__description {
@@ -85,7 +88,6 @@ a {
     line-height: 1.6;
     color: var(--neu-gray-blue);
     margin-bottom: 1.5rem;
-    margin-bottom: clamp(1.5rem, 1.2321428571428572rem + 0.7142857142857143vw, 1.875rem);
 }
 
 .product-card__price-box {
@@ -93,7 +95,6 @@ a {
     column-gap: 1.25rem;
     align-items: center;
     margin-bottom: 1.25rem;
-    margin-bottom: clamp(1.25rem, 0.8035714285714286rem + 1.1904761904761907vw, 1.875rem);
 }
 
 .product-card__discount {
@@ -127,15 +128,34 @@ a {
     margin-right: 11.6px;
 }
 
-@media (min-width: 600px) {
+
+@media (min-width: 37.5em) {
     .product-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+    }
+
+    .product-card__content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .product-card__sub-title {
+        margin-bottom: 1.25rem;
+    }
+
+    .product-card__title {
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card__descriptionб .product-card__price-box {
+        margin-bottom: 1.875rem;
     }
 }
 
-@media (min-width: 991.98px) {
+@media (min-width: 62rem) {
     .product-card__btn:hover {
         background: var(--bg-btn-hover);
     }
